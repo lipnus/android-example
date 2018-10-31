@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lipnus.kumchurk.ScrollActivity">
+
+
+    <ScrollView
+        android:background="#ffffff"
+        android:overScrollMode="never"
+        android:id="@+id/scrollview"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--제일 위쪽의 그림-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--메뉴사진-->
+                <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+
+                <!--흰 글씨 잘 보이게 뒤에 덧데는거-->
+                <ImageView
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:alpha="0.2"
+                    android:background="@drawable/menu_black_cover"/>
+
+                <!--메뉴사진-->
+                <TextView
+                    android:id="@+id/overTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="monospace"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+                <!--몇번째인지-->
+                <TextView
+                    android:id="@+id/viewPagerPageTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="1/3 "
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+            </FrameLayout>
+
+            <!--음식사진 바로 아래부분-->
+            <LinearLayout
+                android:id="@+id/foodCommentLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--좋아요 빠큐 댓글 업로드 메뉴-->
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--하트-->
+                    <LinearLayout
+                        android:onClick="onClick_heart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/heart_iv"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp" />
+
+                        <TextView
+                            android:id="@+id/heart_tv"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="9dp"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <!--뻐큐-->
+                    <LinearLayout
+                        android:onClick="onClick_fuck"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/fuck_iv"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"/>
+
+                        <TextView
+                            android:id="@+id/fuck_tv"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="9dp"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <!--댓글-->
+                    <LinearLayout
+                        android:onClick="onClick_comment"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/comment_iv"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/small_menu_comment"/>
+
+                        <TextView
+                            android:id="@+id/comment_tv"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="9dp"
+                            android:text="0"/>
+
+                    </LinearLayout>
+
+                    <!--업로드-->
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:onClick="onClick_reviewUpload">
+
+                        <ImageView
+                            android:id="@+id/upload_iv"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/small_menu_write"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="9dp"
+                            android:text="업로드"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--리뷰글 있는 곳-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--좋아요와 댓글이 표시되는 메뉴하단부분-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <!--프로필 레이아웃-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <!--프로필사진-->
+                            <ImageView
+                                android:id="@+id/faceIv"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:onClick="onClick_scroll_faceIv"/>
+
+                            <!--아이디-->
+                            <TextView
+                                android:id="@+id/idTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="#000000" />
+                        </LinearLayout>
+
+
+
+                        <!--리뷰글-->
+                        <TextView
+                            android:id="@+id/reviewTv"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="20dp"
+                            android:text="데이터를 받아오는 중입니다..."
+                            android:textSize="12dp" />
+
+                        <!--댓글유도-->
+                        <TextView
+                            android:onClick="onClick_comment"
+                            android:id="@+id/comment_connect_tv"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:text="댓글을 달아주세요"
+                            android:textColor="#b1b1b1"
+                           android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <!--가운데간격-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"></LinearLayout>
+
+                    <!--다음사진으로 가는 화살표-->
+                    <ImageView
+                        android:id="@+id/sc_nextarrow_iv"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginRight="15dp"
+                        android:onClick="onClick_next"
+                        android:background="@drawable/next"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:text="↓ 지도를 보시려면 식당사진을 터치하세요"
+                android:textSize="9dp" />
+
+            <!--식당사진-->
+            <FrameLayout
+
+                android:id="@+id/res_pictureFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick_resMoreInfo">
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/res_pic_Iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/res_pic2_Iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <LinearLayout
+                    android:id="@+id/res_pic_filter_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:alpha="0.3"
+                    android:visibility="invisible"
+                    android:background="#000000"
+                    android:orientation="vertical" />
+
+            </FrameLayout>
+
+
+            <!--식당정보-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--회색부분-->
+                <LinearLayout
+                    android:id="@+id/resturantInfoLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:visibility="invisible"
+                    android:background="#f8f8f8"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/resNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Connect..."
+                        android:textColor="#1b1b1b"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/resInfoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=""
+                        android:textColor="#959595"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/resLeftTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#a10000"
+                        android:textSize="9dp"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/resThemeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#959595"
+                        android:textSize="12dp" />
+
+
+                    <!--별-->
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/resStarTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/resStarNumTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <!--별 아래의 하트 빠큐 코멘트 위치 아이콘-->
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--&lt;!&ndash;하트&ndash;&gt;-->
+                            <!--<ImageView-->
+                                <!--android:layout_width="25dp"-->
+                                <!--android:layout_height="25dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:background="@drawable/small_menu_heart" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/resSumHeartTv"-->
+                                <!--android:layout_gravity="center_horizontal"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textSize="5pt"-->
+                                <!--android:text="212"/>-->
+                        <!--</LinearLayout>-->
+
+                        <!--&lt;!&ndash;빠큐&ndash;&gt;-->
+                        <!--<LinearLayout-->
+                            <!--android:layout_marginLeft="11dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="25dp"-->
+                                <!--android:layout_height="25dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:background="@drawable/small_menu_fuck" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/resSumFuckTv"-->
+                                <!--android:layout_gravity="center_horizontal"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textSize="5pt"-->
+                                <!--android:text="7"/>-->
+                        <!--</LinearLayout>-->
+
+
+                        <!--&lt;!&ndash;코멘트&ndash;&gt;-->
+                        <!--<LinearLayout-->
+                            <!--android:layout_marginLeft="11dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="25dp"-->
+                                <!--android:layout_height="25dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:background="@drawable/small_menu_comment" />w-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/resSumCommentTv"-->
+                                <!--android:layout_gravity="center_horizontal"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textSize="5pt"-->
+                                <!--android:text="38"/>-->
+                        <!--</LinearLayout>-->
+
+                        <!--위치-->
+                        <LinearLayout
+                            android:layout_marginLeft="11dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/small_menu_location" />
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/resDistanceTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="5pt"
+                                android:text=""/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+            <!--평가-->
+            <LinearLayout
+                android:id="@+id/scoreLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--별-->
+                <LinearLayout
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/star1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/star"
+                        android:onClick="onClick_star"/>
+
+                    <ImageView
+                    android:id="@+id/star2"
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/star"
+                    android:onClick="onClick_star"/>
+
+                    <ImageView
+                        android:id="@+id/star3"
+                        android:layout_marginLeft="7dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/star"
+                        android:onClick="onClick_star"/>
+
+                    <ImageView
+                        android:id="@+id/star4"
+                        android:layout_marginLeft="7dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/star"
+                        android:onClick="onClick_star"/>
+
+                    <ImageView
+                        android:id="@+id/star5"
+                        android:layout_marginLeft="7dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/star"
+                        android:onClick="onClick_star"/>
+
+                </LinearLayout>
+
+                <!--평가멘트-->
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/star_scoreTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:text="- 별점으로 식당을 평가해주세요 -"/>
+
+
+
+            </LinearLayout>
+
+
+
+            <!--식당의 메뉴리스트-->
+            <TextView
+                android:layout_marginTop="170dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/menu_list_title_tv"
+                android:text="- MENU -"
+                android:textSize="12pt" />
+
+
+            <ListView
+                android:id="@+id/menu_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#ffffff" />
+
+
+
+            <!--연관메뉴추천-->
+            <TextView
+                android:layout_marginTop="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="How about this?"
+                android:textSize="10pt"
+                android:layout_marginBottom="20dp"/>
+
+            <include
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                layout="@layout/sub_recommend_menu"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

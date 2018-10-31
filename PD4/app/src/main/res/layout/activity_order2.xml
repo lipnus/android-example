@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--본문-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e0d9cc"
+        android:orientation="vertical">
+
+        <!--제목-->
+        <ImageView
+            android:id="@+id/purchase_title"
+            android:layout_width="730px"
+            android:layout_height="128px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="83px"/>
+
+        <!--영수증-->
+        <ImageView
+            android:id="@+id/purchase_receipt"
+            android:layout_width="1268px"
+            android:layout_height="520px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="360px"/>
+
+
+        <!--카드 가로스크롤-->
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="wrap_content"
+            android:layout_height="761px"
+            android:layout_marginTop="914px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/purchase_card"
+                    android:layout_width="2518px"
+                    android:layout_height="761px" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--점-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/purchase_dot"
+            android:layout_marginTop="1675px"
+            android:layout_width="116px"
+            android:layout_height="71px" />
+
+
+        <!--활주로-->
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="25px"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/jumsunlong"/>
+
+
+        <!--비행기 스크롤-->
+        <HorizontalScrollView
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="99dp"
+            android:id="@+id/scroll_plane"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="55dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/plane_iv"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginRight="130dp"
+                    android:layout_width="61dp"
+                    android:layout_height="55dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--하단 네비게이션-->
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            layout="@layout/include_navigation"
+            />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>

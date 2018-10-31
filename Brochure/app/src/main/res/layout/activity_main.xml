@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "20dp"
+    android:orientation="vertical"
+    tools:context="com.lipnus.brochure.MainActivity">
+
+
+
+    <Button
+        android:layout_marginTop="300dp"
+        android:layout_gravity="center"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="#3e4dcc"
+        android:textColor="#ffffff"
+        android:text = "시작하기"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="- 스마트폰을 브로슈어에 끼우고 버튼을 눌러주세요 -"/>
+
+
+    <!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "2로"
+        android:onClick="onClick1"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2페이지로"
+        android:onClick="onClick4"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3으로"
+        android:onClick="onClick3"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4로"
+        android:onClick="onClick5"/>
+
+        -->
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<resources>
+    // common
+    <string name="app_name">KakaoLink Sample</string>
+
+    <string name="kakao_app_key">da4271119e69b289aace2bca05735d26</string>
+    <string name="kakao_scheme">kakaoda4271119e69b289aace2bca05735d26</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+    <string name="alpha_kakao_app_key">000015680000000100000141d90efb2c</string>
+    <string name="alpha_kakao_scheme">kakao000015680000000100000141d90efb2c</string>
+
+    <string name="beta_kakao_app_key">da4271119e69b289aace2bca05735d26</string>
+    <string name="beta_kakao_scheme">kakaoda4271119e69b289aace2bca05735d26</string>
+
+    <string name="sandbox_kakao_app_key">45b44dbd68d2a691c0dc636babbc6a74</string>
+    <string name="sandbox_kakao_scheme">kakao45b44dbd68d2a691c0dc636babbc6a74</string>
+
+    <string name="text_talklink">KakaoTalk Link</string>
+    <string name="text_storylink">KakaoStory Link</string>
+    <string name="text_link40">KakaoTalk Link 4.0</string>
+    <string name="text_os_link">OS Share</string>
+
+    <string name="title_for_kakao_link_sample">Kakao SDK Link Sample</string>
+    <string name="text_events">S2 Events</string>
+
+    // for kakaolink
+    <string name="text_type">Choose a text type</string>
+    <string-array name="text_types">
+        <item>@string/use_text</item>
+        <item>@string/no_text</item>
+    </string-array>
+
+    <string name="link_type">Choose a link type</string>
+    <string-array name="link_types">
+        <item>@string/use_weblink</item>
+        <item>@string/use_inweblink</item>
+        <item>@string/use_applink</item>
+        <item>@string/no_link</item>
+    </string-array>
+
+    <string name="image_type">Choose a image type</string>
+    <string-array name="image_types">
+        <item>@string/use_image</item>
+        <item>@string/no_image</item>
+    </string-array>
+
+    <string name="button_type">Choose a button type</string>
+    <string-array name="button_types">
+        <item>@string/use_appbutton</item>
+        <item>@string/use_webbutton</item>
+        <item>@string/no_button</item>
+    </string-array>
+
+    <string name="link_service_type">Link Service Type</string>
+    <string-array name="link_service_type">
+        <item>@string/story_url_scrap_link</item>
+        <item>@string/story_image_os_contents</item>
+    </string-array>
+
+    <string name="story_url_scrap_link">URL Scrap Link</string>
+    <string name="story_image_os_contents">Image OS contents</string>
+
+    <string name="use_text">Use Text</string>
+    <string name="no_text">No Text</string>
+    <string name="use_applink">Use App Link</string>
+    <string name="use_weblink">Use Web Link</string>
+    <string name="use_inweblink">Use InWeb Link</string>
+    <string name="no_link">No Link</string>
+    <string name="use_image">Use Image</string>
+    <string name="no_image">No Image</string>
+    <string name="use_appbutton">Use App Button</string>
+    <string name="use_webbutton">Use Web Button</string>
+    <string name="no_button">No Button</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+
+    <string name="send_button">Send</string>
+    <string name="clear_button">Clear</string>
+    <string name="reset_message">Cancel All and Start Again?</string>
+
+    <string name="kakaolink_title_forwardable">Message Forwardable</string>
+    <string name="kakaolink_text">Welcome to KakaoLinkSample~\n\nThis Message sent from KakaoLinkSample App.</string>
+    <string name="kakaolink_applink">Connect</string>
+    <string name="kakaolink_weblink">Go to Website</string>
+    <string name="kakaolink_appbutton">View More</string>
+    <string name="kakaolink_webbutton">Go to Website</string>
+    <string name="send_message">Send the message below?</string>
+
+    <string name="text_send_message">Send Message</string>
+    <string name="events_publish">Pubish an event</string>
+    <string name="events_publish_multiple">Publish multiple events</string>
+    <string name="events_add_to_batch">Add event to batch</string>
+
+    <string name="title_activity_kakao_link35_main">KakaoTalk Link</string>
+    <string name="title_activity_kakao_link40_main">KakaoLink 4.0</string>
+    <string name="title_activity_kakao_story_link_main">KakaoStory Link</string>
+    <string name="title_activity_content_share">Content Share with KakaoLink</string>
+
+
+    <string name="template_id">template id</string>
+    <string name="template_args_text">template arguments</string>
+    <string name="android_app_param_text">androidAppParam</string>
+    <string name="iphone_app_param_text">iphoneAppParam</string>
+    <string name="sender_param_text">senderParam</string>
+
+    <string name="template_id_hint">Enter template id</string>
+    <string name="kakaolink_40_send_text">Share via KakaoLink</string>
+
+    <string name="text_share_intent_chooser">Choose an app to share</string>
+</resources>

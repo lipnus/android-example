@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lipnus.scheduleapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="#082233">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:textColor="#ffffff"
+            android:text="IA"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/backgroundFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ia_bg">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90dp">
+
+            <LinearLayout
+                android:id="@+id/todayContentLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <!--=================================================================================-->
+                <!--=================================================================================-->
+
+                <!-- 개발 진행률 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#ffffff"
+                    android:alpha="0.7"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#082233"
+                            android:text="개발 진행률"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|bottom">
+
+                            <TextView
+                                android:id="@+id/ia_devlopPercent_Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#082233"
+                                android:text="50%"
+                                android:layout_marginBottom="1dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ProgressBar
+                        android:id="@+id/ia_devlopPercent_Progress"
+                        android:layout_marginTop="2dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:max="100"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/customprogress"
+                        />
+
+                </LinearLayout>
+
+                <!-- 단위테스트 진행률 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#ffffff"
+                    android:alpha="0.7"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#082233"
+                            android:text="단위 테스트 진행률"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|bottom">
+
+                            <TextView
+                                android:id="@+id/ia_Percent_Tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#082233"
+                                android:text="50%"
+                                android:layout_marginBottom="1dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/ia_Percent_Ing_Progress"
+                            android:layout_marginTop="2dp"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:max="100"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/customprogress4"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ia_Percent_End_Progress"
+                            android:layout_marginTop="2dp"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressDrawable="@drawable/customprogress3"
+                            />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- 타이틀과 색상소개부분 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginTop="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#111111"
+                        android:layout_marginBottom="7dp"
+                        android:textStyle="bold"
+                        android:text = "개발완료 예정일 및 단위테스트 결과"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#ebebeb"
+                                android:textColor="#000000"
+                                android:text = "테스트이전"/>
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#6dcff6"
+                                android:text = "오류수정중"/>
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#082233"
+                                android:text = "테스트완료"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- IA 표가 그려지는 부분 -->
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingRight="30px"
+                    android:paddingLeft="30px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- 첫째열 -->
+                    <LinearLayout
+                        android:id="@+id/depth1_Linear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="depth1"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:background="#6dcff6">
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <!-- 둘째열 -->
+                    <LinearLayout
+                        android:id="@+id/depth2_Linear"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="depth2"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ebebeb"
+                            android:alpha="0.8">
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 셋째열 -->
+                    <LinearLayout
+                        android:id="@+id/depth3_Linear"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="depth3"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#082233"
+                            android:alpha="0.8">
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--=================================================================================-->
+                <!--=================================================================================-->
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--하단메뉴==========================================================================-->
+        <include
+            android:id="@+id/top"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bottommenu"
+            />
+    </FrameLayout>
+
+
+</LinearLayout>

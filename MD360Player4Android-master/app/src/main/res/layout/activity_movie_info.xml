@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--노트8에서만 될거니까 그냥 픽셀로 한다...-->
+    
+    <ScrollView
+        android:id="@+id/mi_scroll"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--최상단 사진-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mi_top_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="788px" />
+
+                <ImageView
+                    android:layout_gravity="bottom"
+                    android:id="@+id/mi_top_gradation_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="273px" />
+            </FrameLayout>
+            
+
+            <!--영화정보사진-->
+            <ImageView
+                android:id="@+id/mi_title_iv"
+                android:layout_width="match_parent"
+                android:layout_height="1698px" />
+
+            <!--수치 데이터 부분-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="522px">
+
+                <!--영화 그래프-->
+                <ImageView
+                    android:id="@+id/mi_graph_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="522px" />
+
+                <!--위에 얹을 그래프-->
+                <ImageView
+                    android:layout_marginTop="120px"
+                    android:layout_marginLeft="695px"
+                    android:id="@+id/mi_graph2_iv"
+                    android:layout_width="238px"
+                    android:layout_height="293px" />
+            </FrameLayout>
+
+            <!--코멘트-->
+            <ImageView
+                android:id="@+id/mi_comment_iv"
+                android:layout_width="match_parent"
+                android:layout_height="1313px"
+                android:layout_marginBottom="163px"/>
+
+            
+
+        </LinearLayout>
+        
+        
+        
+        
+    </ScrollView>
+    
+    
+    <ImageView
+        android:onClick="onClick_mi_reserve"
+        android:layout_gravity="bottom"
+        android:id="@+id/mi_bottom_iv"
+        android:layout_width="match_parent"
+        android:layout_height="163px"
+        android:background="@drawable/botton_button"/>
+
+    <ImageView
+        android:onClick="onClick_mi_topbar"
+        android:id="@+id/mi_topbar_iv"
+        android:layout_width="match_parent"
+        android:layout_height="140px" />
+</FrameLayout>

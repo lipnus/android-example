@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExampleSoundPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">시작</string>
+    <string name="stop">중단</string>
+
+</resources>

@@ -1,0 +1,69 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onClick_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:id="@+id/buttonChoose" />
+
+        <Button
+            android:onClick="onClick_makeJson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make Json"/>
+
+        <Button
+            android:onClick="onClick_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check"/>
+
+        <Button
+            android:onClick="onClick_volleysystem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="volley 클래스화"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="텍스트뷰"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/imageView" />
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:hint="메뉴이름"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+
+    <Button
+        android:onClick="onClick_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:id="@+id/buttonUpload" />
+
+        </LinearLayout>
+
+

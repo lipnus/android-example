@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileOptions.encoding = "UTF-8"
+    version = project.APP_VERSION
+    project.ext.set("defaultDeployPhase", "${project.hasProperty('deploy_phase') ? deploy_phase.toString() : "$DEFAULT_PHASE"}")
+
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION
+    buildToolsVersion ANDROID_BUILD_TOOL_VERSION
+
+    defaultConfig {
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion 23
+        versionCode Integer.parseInt(project.APP_VERSION)
+        versionName project.APP_VERSION_NAME
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled true
+        }
+    }
+
+    // sample app에선 java 1.6 기반으로 작성되었다.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError false
+        checkAllWarnings true
+        xmlReport true
+        htmlReport true
+        disable "InvalidPackage", "MissingTranslation"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            println output
+            output.processManifest << {
+                println ">> processManifest ($output.processManifest.manifestOutputFile)"
+                def appKeyName = 'kakao_app_key'
+                def appSchemeName = 'kakao_scheme'
+                def file = output.processManifest.manifestOutputFile
+                replaceString(file, appKeyName, addPrefix(appKeyName))
+                replaceString(file, appSchemeName, addPrefix(appSchemeName))
+            }
+        }
+    }
+}
+
+dependencies {
+    compile project(':kakaonavi')
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+def addPrefix(value) {
+    def result = value
+    if (project.defaultDeployPhase.toLowerCase() != 'release') {
+        result = project.defaultDeployPhase.toLowerCase() + "_" + result
+    }
+
+    println result
+    return result
+}
+
+def replaceString(file, fromString, toString) {
+    def updatedContent = file.getText('UTF-8').replaceAll(fromString, toString)
+    file.write(updatedContent, 'UTF-8')
+}

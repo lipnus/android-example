@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lipnus.kum_scroll_effect.ScrollActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="500dp">
+
+
+            <!--제일 위쪽의 그림-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--메뉴사진-->
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+
+
+                <TextView
+                    android:id="@+id/overTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="monospace"
+                    android:text="목살스테이크샐러드 12.0"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/viewPagerPageTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="1/3 "
+                    android:textColor="#ffffff"
+                    android:textSize="10dp" />
+
+            </FrameLayout>
+
+            <!--음식사진 바로 아래부분-->
+            <LinearLayout
+                android:id="@+id/foodCommentLinear"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--메뉴-->
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/submenu3" />
+
+                <!--메뉴밑의 숫자들-->
+                <LinearLayout
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_marginLeft="36dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_marginLeft="37dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textSize="9dp"/>
+
+                    <TextView
+                        android:layout_marginLeft="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="업로드"
+                        android:textSize="9dp"
+                        android:layout_marginRight="14dp"/>
+
+
+                </LinearLayout>
+
+                <!--좋아요와 댓글이 표시되는 메뉴하단부분-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp">
+
+                    <!--프로필 레이아웃-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--프로필사진-->
+                        <ImageView
+                            android:id="@+id/faceIv"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/face"/>
+
+                        <!--아이디-->
+                        <TextView
+                            android:id="@+id/idTv"
+                            android:layout_marginLeft="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:text="sh_9513"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/likeitTv"
+                        android:layout_marginTop="9dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="♥ 좋아요 10개 "
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/reviewTv"
+                        android:layout_marginRight="70dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="먹기좋은 한입크기라 폭풍흡입했습니다. \n양도 많아서 가성비도 짱짱이예요"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <!--식당정보-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--회색부분-->
+                <LinearLayout
+                    android:gravity="center"
+                    android:id="@+id/resturantInfoLinear"
+                    android:layout_marginTop="100dp"
+                    android:layout_width="match_parent"
+                    android:background="#f8f8f8"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:alpha="0">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="매스플래이트"
+                        android:textColor="#1b1b1b"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이탈리아음식 / 11:00 - 22:00"
+                        android:textColor="#959595"
+                        android:textSize="12dp"/>
+
+                    <LinearLayout
+
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★★★★☆"
+                            android:textSize="17dp"
+                            android:textColor="#5b0909"/>
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="10dp"
+                            android:text="(4.3)"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!--작은 식당그림-->
+                <ImageView
+                    android:id="@+id/resSmallIv"
+                    android:layout_marginTop="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/restaurant_small"
+                    android:layout_gravity="center_horizontal"
+                    android:rotation="45"
+                    android:alpha="0"/>
+
+            </FrameLayout>
+
+            <!--식당정보 밑에 사진-->
+            <FrameLayout
+                android:id="@+id/res_pictureFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/res_pic_Iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/restaurant"/>
+
+                <LinearLayout
+                    android:id="@+id/res_pic_filter_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#000000"
+                    android:alpha="0.6"
+                    android:orientation="vertical"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/resinfo2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상세정보를 보시려면 터치하세요"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"/>
+
+            </FrameLayout>
+
+            <!--five star-->
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="110dp"
+                android:layout_height="11dp"
+                android:background="@drawable/fivestar"/>
+
+            <!--별다섯개-->
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:textColor="#5c5c5c"
+                android:text="☆ ☆ ☆ ☆ ☆"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <!--혼밥같밥이 들어있는 레이아웃-->
+        <FrameLayout
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="240dp"
+            android:layout_height="80dp">
+
+            <!--혼밥-->
+            <LinearLayout
+                android:onClick="onClick_howmanyPeople"
+                android:id="@+id/intro_solo_Lr"
+                android:visibility="gone"
+                android:layout_gravity="left|top"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/intro_solo"
+                    />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:textSize="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="혼밥"/>
+
+            </LinearLayout>
+
+            <!--같밥-->
+            <LinearLayout
+                android:onClick="onClick_howmanyPeople"
+                android:id="@+id/intro_with_Lr"
+                android:visibility="gone"
+                android:layout_gravity="right|top"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/intro_with"
+                    />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:textSize="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="같밥"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!--반투명한 직사각형 뒷받침-->
+        <LinearLayout
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="#726f6f"
+            android:alpha="0.1">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/intro_question_tv"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:textSize="12dp"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="#ffffff"
+            android:text="정보를 받아오고 있어요..."/>
+
+        <ImageView
+            android:id="@+id/intro_question_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="60dp"/>
+
+    </FrameLayout>
+
+    <!--YES NO SKIP 선택-->
+     <LinearLayout
+         android:layout_gravity="bottom|center_horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="100dp"
+         android:weightSum="3">
+
+         <TextView
+             android:visibility="gone"
+
+             android:onClick="onClick_question_answer"
+             android:id="@+id/intro_yes_tv"
+             android:gravity="center"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:textColor="#f6f6f6"
+             android:textSize="19dp"
+             android:text="YES"/>
+
+         <TextView
+             android:visibility="gone"
+
+             android:onClick="onClick_question_answer"
+             android:id="@+id/intro_no_tv"
+             android:gravity="center"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:textColor="#f6f6f6"
+             android:textSize="19dp"
+             android:text="NO"/>
+
+         <TextView
+             android:onClick="onClick_question_answer"
+             android:id="@+id/intro_skip_tv"
+             android:gravity="center"
+             android:layout_weight="1"
+
+             android:layout_width="match_parent"
+
+             android:layout_height="match_parent"
+             android:textColor="#f6f6f6"
+             android:textSize="19dp"
+             android:text="SKIP"/>
+
+     </LinearLayout>
+
+
+</FrameLayout>

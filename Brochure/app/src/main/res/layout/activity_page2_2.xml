@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aeaba3"
+        android:weightSum="1">
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/timeline"/>
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="100dp"
+            android:text="▲\n▲\n▲\n"/>
+
+        <ImageView
+            android:id="@+id/birthYear"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:src="@drawable/birthnumber"/>
+
+
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/titlebirth"/>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="220dp"
+                android:src="@drawable/me"/>
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text=
+                    "3월 22일 이 세상에 나타나다!!"
+                />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_width="230dp"
+                android:layout_height="190dp"
+                android:src="@drawable/waterday"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text=
+                    "물의 날이죠."/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:src="@drawable/sameas" />
+
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="270dp"
+                android:layout_height="330dp"
+                android:src="@drawable/starface"/>
+
+            <TextView
+                android:layout_marginTop="17dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text=
+                    "나이가 같은 친구?들"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:src="@drawable/busan" />
+
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="270dp"
+                android:layout_height="200dp"
+                android:src="@drawable/bridge"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text=
+                    "부산에서 초, 중, 고등학교를 다녔어요  \n\n개포초 -> 부산진중-> 개성고"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:src="@drawable/like" />
+
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:src="@drawable/game"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text=
+                    "무언가 만드는 것을 좋아하는 학생이었죠                     \n\n(사진은 중학생때 만든 게임)        "
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_gravity="center"
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:src="@drawable/pnu" />
+
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="280dp"
+                android:src="@drawable/pnumark"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="8pt"
+                android:text=
+                    "생물 배우는게 재미있고 \n잘 하는 것 같아 \n\n부산대 분자생물학과 입학!"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_gravity="center"
+                android:layout_width="220dp"
+                android:layout_height="70dp"
+                android:src="@drawable/change" />
+
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:src="@drawable/what"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                android:text=
+                    "하고싶었던 것을 해보기 위해 \n중도 자퇴.. \n\n\n인생의 암흑기를 맞이합니다"/>
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_marginTop="170dp"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="280dp"
+                android:src="@drawable/ddss"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                android:text=
+                    "대성학원에 P1B반에 입성 \n\n열공!!!!"/>
+        </LinearLayout>
+
+
+
+
+
+
+
+        <TextView
+            android:layout_marginTop="130dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="100dp"
+            android:text="▲\n▲\n▲\n"/>
+
+        <Button
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#3d4dcc"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:text="바닥을 치고 다시 높이! \n\n [ 이곳을 터치해주세요 ]"
+            android:onClick="onClick_next"/>
+
+    </LinearLayout>
+</ScrollView>

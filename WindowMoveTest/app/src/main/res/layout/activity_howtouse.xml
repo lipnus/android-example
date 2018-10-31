@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="160dp"
+        android:layout_height="210dp"
+        android:background="@drawable/drag" />
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="5pt"
+        android:text="두 손가락을 이용해 화면 확대/축소가능"/>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="260dp"
+        android:layout_height="280dp"
+        android:background="@drawable/howtouse" />
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="접근권한 허가하기 \n(에러가 나는경우)"
+        android:textColor="#ffffff"
+        android:background="#33001a"
+        android:onClick="onClick_setting"/>
+
+    <Button
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="처음으로 돌아가기"
+        android:textColor="#ffffff"
+        android:background="#33001a"
+        android:onClick="onClick_backToMain2"/>
+
+</LinearLayout>
+
+</ScrollView>

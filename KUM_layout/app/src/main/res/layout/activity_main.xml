@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/menu"
+                android:onClick="onClick_LeftMenu"/>
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/kumchurk" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/search"
+                android:onClick="onClick_Search"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/slidingMenu"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:background="@drawable/sliding"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/slidingShadow"
+            android:layout_marginLeft="220dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#000000"
+            android:alpha="0.6"
+            android:onClick="onClick_SlideShadow"
+            android:visibility="gone"/>
+
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffa07a"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:gravity="center"
+    android:id="@+id/windowFrameLayout"
+    android:alpha="0.4">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#706b6b"
+        android:gravity="center"
+        android:padding="3dp"
+        android:id="@+id/EdgeFrameLayout"
+        >
+
+        <FrameLayout
+            android:id="@+id/cameraFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/close"
+                android:layout_gravity="top|right"
+                android:id="@+id/close_window_btn"
+                android:alpha="0.4" />
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="8dp"
+                android:background="@drawable/menu"
+                android:layout_gravity="top|left"
+                android:id="@+id/call_menu"
+                android:alpha="0.4" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/WindowTtextView"
+        android:layout_gravity="center"
+        android:text=""/>
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/SlideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#3d3d3d"
+        android:visibility="gone">
+
+        <Button
+            android:layout_marginLeft="9dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/power"
+            android:id="@+id/poweronoff"
+            android:layout_marginRight="9dp"
+            />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="8dp"
+            android:background="@drawable/change"
+            android:id="@+id/changeBtn"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:id="@+id/camBtn"
+            android:background="@drawable/camera"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:layout_marginRight="8dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/zoomin"
+            android:id="@+id/zoomin"
+            />
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

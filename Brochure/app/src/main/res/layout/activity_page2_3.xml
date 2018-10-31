@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aeaba3"
+        android:weightSum="1">
+
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#bf1b23"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:text="그리고 지금 이 순간에도 꿈을 향해 날아가고 있죠 \n\n [ 이곳을 터치해주세요 ]"
+            android:onClick="onClick_next"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:background="@drawable/superman2a"/>
+
+        <TextView
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="100dp"
+            android:text="▼\n▼\n▼\n"/>
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#2c2c2c"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                android:text=
+                    "1학년을 마친 후 \n\n육군 5군단 헌병특임대(SDT)에서  \n21개월의 군복무를 마치고 전역"
+                />
+
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="300dp"
+                android:src="@drawable/sunpila"/>
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:src="@drawable/sdt1a"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#910023">
+
+
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:src="@drawable/kumark"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="8pt"
+                android:text=
+                    "고려대학교 정보대학 컴퓨터학과 입학! "
+                />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="900dp"
+            android:background="@drawable/supermana"/>
+
+        <TextView
+            android:layout_marginTop="330dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="100dp"
+            android:text="▼\n▼\n▼\n"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

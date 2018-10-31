@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4ff43">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#3e4dcc">
+
+        <ImageView
+        android:id="@+id/myfavorite"
+        android:layout_gravity="bottom"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/myfavorite"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/previewLinear"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="260dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/profile">
+
+        <FrameLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="테스트"
+        android:onClick="onClick_test"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/informationTextView"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        android:textColor="#858585"
+        android:layout_marginBottom="130dp"
+        android:text="- 제가 관심을 가지고 있는 사람의 얼굴을 확인해 주세요 -"/>
+
+    <Button
+        android:id="@+id/faceCheckBtn"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="40dp"
+        android:text="□□□"
+        android:background="#3e4dcc"
+        android:textColor="#ffffff"
+        android:onClick="onClick"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iamsunpil"
+        android:layout_gravity="top"
+        android:layout_marginTop="25dp"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/iamsunpil"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/miniprofile"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/myface"/>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:visibility="gone"
+        android:id= "@+id/whiteLinear"
+        android:layout_marginTop="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="360dp"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#717171"
+            android:text="★나의 꿈은 \n소프트웨어 기반의 스타트업을 하는 것"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#717171"
+            android:text="프로그래밍과 디자인이 모두 가능하면서 트랜드에 민감하게 반응하며 기획까지 할 수 있는 개발자가 되는 것이 목표입니다"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#717171"
+            android:text="허황된 목표라고 평가절하 하는 사람도 많지만, 지금 이 순간에도 목표를 향해 한발짝 다가가고 있습니다"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5pt"
+            android:textColor="#fd7979"
+            android:text="[2D 기초디자인] \n- '브로슈어(brochure) 디자인 제작과 발표' 과제 (2016. 6. 15) "/>
+
+        <Button
+            android:id="@+id/endbtn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="50dp"
+            android:text="END"
+            android:background="#3e4dcc"
+            android:textColor="#ffffff"
+            android:onClick="onClick_end"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
+
+
+

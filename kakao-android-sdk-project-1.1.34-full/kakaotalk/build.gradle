@@ -1,0 +1,148 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileOptions.encoding = "UTF-8"
+    version = KAKAO_SDK_VERSION
+    project.ext.set("defaultDeployPhase", "${project.hasProperty('deploy_phase') ? deploy_phase.toString() : "$DEFAULT_PHASE"}")
+
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION
+    buildToolsVersion ANDROID_BUILD_TOOL_VERSION
+    publishNonDefault true
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    defaultConfig {
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION
+        versionCode Integer.parseInt(project.AAR_VERSION)
+        versionName AAR_VERSION_NAME
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    releaseCompile project(path: ':friends', configuration: 'release')
+    debugCompile project(path: ':friends', configuration: 'debug')
+}
+
+publishing {
+    repositories {
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+            if(project.version.endsWith('-SNAPSHOT')) {
+                url NEXUS_SNAPSHOT_REPOSITORY_URL
+            } else {
+                url NEXUS_RELEASE_REPOSITORY_URL
+            }
+            credentials {
+                username NEXUS_USERNAME
+                password NEXUS_PASSWORD
+            }
+        }
+    }
+
+    publications {
+        mavenJava(MavenPublication) {
+            groupId KAKAO_SDK_GROUP
+            version project.version
+            artifactId ARTIFACT_NAME
+            if(project.defaultDeployPhase.toLowerCase() != 'release') {
+                artifactId += "-${project.defaultDeployPhase}"
+            }
+
+            artifact sourcesJar
+            artifact "$buildDir/outputs/$ARTIFACT_TYPE/$ARTIFACT_NAME-DEPLOY_PHASE(${project.defaultDeployPhase})-release.$ARTIFACT_TYPE"
+
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+
+                //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.releaseCompile.allDependencies.each {
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', KAKAO_SDK_GROUP)
+                    dependencyNode.appendNode('artifactId', getModuleName(project, it.name))
+                    dependencyNode.appendNode('version', project.version)
+                    dependencyNode.appendNode('type', ARTIFACT_TYPE)
+                }
+
+                def licenses = asNode().appendNode('licenses')
+                def license = licenses.appendNode('license')
+                license.appendNode('name', LICENSE_NAME)
+                license.appendNode('url', LICENSE_URL)
+                license.appendNode('distribution', LICENSE_DISTRIBUTION)
+            }
+        }
+    }
+}
+
+project.afterEvaluate {
+    publish.shouldRunAfter ':friends:publish'
+}
+
+ext.configBuild = { variant ->
+    variant.assemble << {
+        def aarName = "${project.ARTIFACT_NAME}" +
+                "-DEPLOY_PHASE(${project.defaultDeployPhase})" +
+                "-${variant.name}.${project.ARTIFACT_TYPE}"
+
+        println "\n============================================================"
+        println "project module : $project.ARTIFACT_NAME"
+        println "project version : $project.version"
+        println "deploy phase : $project.defaultDeployPhase"
+        println "output name : $aarName"
+        println "============================================================\n"
+        copy {
+            variant.outputs.each { output ->
+                from output.outputFile
+                into output.outputFile.parent
+                rename { aarName }
+            }
+        }
+    }
+}
+
+def getModuleName(Project project, String name) {
+    def result = name
+    switch (name) {
+        case 'util':
+        case 'auth':
+        case 'usermgmt':
+        case 'network':
+        case 'friends':
+        case 'storage':
+            if(project.defaultDeployPhase.toLowerCase() != 'release') {
+                result += "-${project.defaultDeployPhase.toLowerCase()}"
+            }
+            break;
+    }
+
+    println result
+    return result
+}
+
+android.libraryVariants.all { variant ->
+    configBuild(variant)
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = SOURCE_CLASSIFIER
+}

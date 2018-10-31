@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lipnus.pd4.BaseActivity">
+
+    <!--상단바-->
+    <include
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/include_title"
+        />
+
+    <!--하단 네비게이션-->
+    <include
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        layout="@layout/include_navigation"
+        />
+
+
+    <!--본문-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="도장"/>
+
+    </LinearLayout>
+
+</FrameLayout>

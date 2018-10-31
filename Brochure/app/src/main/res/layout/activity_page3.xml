@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bybackgrounda"
+    android:orientation="vertical"
+    tools:context="com.lipnus.brochure.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/sayho"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/shashashaa"
+        android:alpha="0.8"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/rappera" />
+
+    <Button
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/mica"
+        android:onClick="onClick"
+        android:layout_marginBottom="60dp"/>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        android:padding="0dp"
+        android:orientation="vertical"
+        android:alpha="0.8">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="     - 마이크 아이콘을 터치해주세요 -\n(음성인식에는 약 2~3초가 소요됩니다)"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

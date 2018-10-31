@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_for_ssl_warning">Security Warning</string>
+    <string name="message_for_ssl_warning">There are problems with the security certificate for this site.</string>
+    <string name="button_for_ssl_go_back">Back</string>
+    <string name="button_for_ssl_go_forward">Continue</string>
+</resources>

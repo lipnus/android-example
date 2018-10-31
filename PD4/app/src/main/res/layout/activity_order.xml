@@ -1,0 +1,352 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--본문-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e0d9cc"
+        android:orientation="vertical">
+
+
+        <!--위쪽배경-->
+        <ImageView
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:id="@+id/up_layout_iv"/>
+
+        <!--타이틀-->
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="182dp"
+            android:layout_height="32dp"
+            android:id="@+id/title_iv"/>
+
+        <!--커피 선택창-->
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_marginBottom="201dp"
+            android:id="@+id/mid_layout_iv"/>
+
+        <!--활주로-->
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/landing_text"/>
+
+
+        <!--커피그림 하늘색 배경, 터치 시 국가선택-->
+        <ImageView
+            android:id="@+id/order_coffee_background_iv"
+            android:layout_width="521px"
+            android:layout_height="521px"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="320px"/>
+
+        <!--커피그림-->
+        <ImageView
+            android:id="@+id/order_coffee_pic_iv"
+            android:layout_width="258px"
+            android:layout_height="408px"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="370px"
+            android:onClick="onClick_destination"/>
+
+        <!--목적지 대문자 알파벳-->
+        <ImageView
+            android:id="@+id/order_location_iv"
+            android:layout_width="290px"
+            android:layout_height="134px"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="950px"
+            android:layout_marginRight="120px"
+            android:onClick="onClick_destination"/>
+
+        <!--목적지-->
+        <ImageView
+            android:id="@+id/order_location2_iv"
+            android:layout_width="612px"
+            android:layout_height="151px"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="1510px"
+            android:layout_marginLeft="170px"
+            android:onClick="onClick_destination"/>
+
+        <!--핫 아이스-->
+        <ImageView
+            android:id="@+id/order_temperature_iv"
+            android:layout_width="178px"
+            android:layout_height="151px"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="1510px"
+            android:layout_marginLeft="784px"
+            android:onClick="onClick_type"/>
+
+        <!--사이즈-->
+        <ImageView
+            android:id="@+id/order_size_iv"
+            android:layout_width="362px"
+            android:layout_height="151px"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="1510px"
+            android:layout_marginLeft="990px"
+            android:onClick="onClick_type"/>
+
+        <!--비행기 스크롤-->
+        <HorizontalScrollView
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="99dp"
+            android:id="@+id/scroll_plane"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="55dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/plane_iv"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginRight="130dp"
+                    android:layout_width="61dp"
+                    android:layout_height="55dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--하단 네비게이션-->
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            layout="@layout/include_navigation"
+            />
+
+
+
+
+
+
+        <!--나라선택 팝업-->
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/popup_fL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/nationCancel"
+                android:layout_width="match_parent"
+                android:layout_height="1000px"
+                android:background="#ffffff"
+                android:alpha="0.8"
+                android:onClick="onClick_pop_cancel"/>
+
+            <!--전체노란부분-->
+            <ImageView
+                android:id="@+id/popup_background_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!--지도 수평스크롤-->
+            <HorizontalScrollView
+                android:id="@+id/popup_horizontal_scroll_iv"
+                android:layout_width="match_parent"
+                android:layout_height="1143px"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="337px">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--배경-->
+                    <ImageView
+                        android:id="@+id/popup_world_iv"
+                        android:layout_width="2121px"
+                        android:layout_height="1143px"/>
+
+
+
+                    <ImageView
+                        android:id="@+id/flag_usa"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_marginLeft="490px"
+                        android:layout_marginTop="334px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_ireland"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_marginLeft="786px"
+                        android:layout_marginTop="190px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_italy"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_marginLeft="916px"
+                        android:layout_marginTop="423px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_austria"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_marginLeft="1010px"
+                        android:layout_marginTop="220px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_turkey"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_marginLeft="1224px"
+                        android:layout_marginTop="385px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_korea"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_gravity="top|right"
+                        android:layout_marginRight="210px"
+                        android:layout_marginTop="329px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+                        android:id="@+id/flag_vietnam"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_gravity="top|right"
+                        android:layout_marginRight="320px"
+                        android:layout_marginTop="549px"
+                        android:onClick="onClick_flag"/>
+
+                    <ImageView
+
+                        android:id="@+id/flag_australia"
+                        android:layout_width="138px"
+                        android:layout_height="138px"
+                        android:layout_gravity="top|right"
+                        android:layout_marginRight="175px"
+                        android:layout_marginTop="791px"
+                        android:onClick="onClick_flag"/>
+
+                </FrameLayout>
+
+
+            </HorizontalScrollView>
+
+            <!--나라이름-->
+            <ImageView
+                android:id="@+id/popup_counrry_name_iv"
+                android:layout_width="727px"
+                android:layout_height="73px"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="196px"
+                android:onClick="onClick_pop_cancel"/>
+
+        </FrameLayout>
+
+
+        <!--타입선택 팝업-->
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/popup_temper_fL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--흰부분-->
+            <View
+                android:id="@+id/type_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="2100px"
+                android:background="#ffffff"
+                android:alpha="0.8"
+                android:onClick="onClick_pop_cancel"/>
+
+            <!--노란부분-->
+            <ImageView
+                android:id="@+id/popup_temper_background_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onClick_pop_cancel"/>
+
+            <!--스몰-->
+            <ImageView
+                android:id="@+id/popup_type_small_iv"
+                android:layout_width="238px"
+                android:layout_height="82px"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="266px"
+                android:layout_marginRight="330px"
+                android:onClick="onClick_type_select"/>
+
+            <!--미들-->
+            <ImageView
+                android:id="@+id/popup_type_regular_iv"
+                android:layout_width="238px"
+                android:layout_height="82px"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="178px"
+                android:layout_marginRight="330px"
+                android:onClick="onClick_type_select"/>
+
+            <!--라지-->
+            <ImageView
+                android:id="@+id/popup_type_large_iv"
+                android:layout_width="238px"
+                android:layout_height="82px"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="90px"
+                android:layout_marginRight="330px"
+                android:onClick="onClick_type_select"/>
+
+            <!--핫-->
+            <ImageView
+                android:id="@+id/popup_type_hot_iv"
+                android:layout_width="238px"
+                android:layout_height="82px"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="266px"
+                android:layout_marginRight="896px"
+                android:onClick="onClick_type_select"/>
+
+            <!--아이스-->
+            <ImageView
+                android:id="@+id/popup_type_ice_iv"
+                android:layout_width="238px"
+                android:layout_height="82px"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="90px"
+                android:layout_marginRight="896px"
+                android:onClick="onClick_type_select"/>
+
+        </FrameLayout>
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>

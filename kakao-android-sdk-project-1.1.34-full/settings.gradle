@@ -1,0 +1,5 @@
+include ':util', ':auth', ':kakaolink', ':kakaotalk', ':usermgmt', ':kakaostory', ':push', ':friends', ':storage', ':network', ':s2', ':kakaonavi', ':test-common'
+include ':kakao-open-android-sdk-sample'
+include ':kakao-open-android-link-sample'
+include ':kakao-open-android-s2-sample'
+include ':kakao-open-android-navi-sample'

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FF0"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:id="@+id/windowLinearLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/windowTv"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="윈도우닫기"
+        android:id="@+id/close_window_btn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이동"
+        android:id="@+id/move_btn"/>
+
+    <FrameLayout
+        android:id="@+id/cameraFrameLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="캡쳐"
+            android:id="@+id/captureBtn"/>
+
+    </FrameLayout>
+</LinearLayout>

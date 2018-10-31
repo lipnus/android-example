@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.androidtown.actionbar.MainActivity" >
+
+
+    <item
+        android:id="@+id/add_schedule"
+        android:title="일정추가"
+        android:orderInCategory="103"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_error_title">위치 권한 에러</string>
+    <string name="permission_error_message">이 앱은 위치 권한을 가지고 있지 않습니다.</string>
+    <string name="permission_error_okay">확인</string>
+</resources>

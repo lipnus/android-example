@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 하단메뉴 ===============================================================================-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:alpha="0.85"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#ffffff"
+    android:padding="5dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <!-- 버튼1 today ===============================================================================-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/todayBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:onClick="onClick_menu"
+            android:background="@drawable/todaybutton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="today"/>
+
+    </LinearLayout>
+
+
+    <!-- 버튼2 WBS ===============================================================================-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/wbsBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:onClick="onClick_menu"
+            android:background="@drawable/wbsbutton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="WBS"/>
+
+    </LinearLayout>
+
+
+    <!-- 버튼3 IA ===============================================================================-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/iaBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:onClick="onClick_menu"
+            android:background="@drawable/iabutton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="IA"/>
+
+    </LinearLayout>
+
+
+    <!-- 버튼4 test ===============================================================================-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/testBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:onClick="onClick_menu"
+            android:background="@drawable/testbutton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="test"/>
+
+    </LinearLayout>
+
+
+
+    <!-- 버튼5 more ===============================================================================-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/moreBtn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:onClick="onClick_menu"
+            android:background="@drawable/morebutton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="more"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

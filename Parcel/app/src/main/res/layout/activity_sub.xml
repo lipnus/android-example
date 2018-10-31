@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/end_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="끈다"
+        android:textSize="24dp"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/fuckingtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end_btn"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="됐다 끄자"
+        android:textSize="14dp"
+        android:textColor="#ffad6535" />
+
+</RelativeLayout>

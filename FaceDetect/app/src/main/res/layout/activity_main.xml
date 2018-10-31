@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="320px"
+        android:layout_height="240px">
+
+        <com.lipnus.facedetect.MyCameraSurface
+            android:id="@+id/mysurface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lipnus.facedetect.MyView
+            android:id="@+id/myview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/mainTv"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="얼굴숫자"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "블루투스와 연결"
+        android:onClick="onClick_connectBlue"/>
+
+</LinearLayout>

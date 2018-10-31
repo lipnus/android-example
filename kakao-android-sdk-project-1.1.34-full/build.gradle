@@ -1,0 +1,271 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://raw.github.com/xujiaao/mvn-repository/master/releases' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+rootProject.version = KAKAO_SDK_VERSION
+
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+}
+
+apply plugin: 'java'
+task aggregatejavadoc(type: Javadoc) {
+    source subprojects.collect { project ->
+        file("$project.projectDir/src/main/java")
+    }
+    destinationDir = new File("./docs/")
+    classpath = files(subprojects.collect { project ->
+        project.sourceSets.main.compileClasspath
+    })
+
+    title = "android lib - $project.KAKAO_SDK_VERSION API"
+    description "Generates Javadoc for api sdk."
+    failOnError false
+
+    options {
+        locale = 'en_US'
+        encoding = 'UTF-8'
+        charSet = 'UTF-8'
+        author = false
+        noDeprecated = true
+        memberLevel = JavadocMemberLevel.PUBLIC
+        links("http://docs.oracle.com/javase/7/docs/api/");
+        links("http://ormlite.com/javadoc/ormlite-core/");
+        links("http://ormlite.com/javadoc/ormlite-android/");
+
+        doclet = "com.kakao.tools.doclets.standard.Standard"
+        docletpath = [rootProject.file('./doctemplate/capri-doclet.jar')]
+        stylesheetFile = rootProject.file('./doctemplate/capri-javadoc-stylesheet.css')
+    }
+
+
+    exclude '**/StringSet.java'
+    exclude '**/BuildConfig.java'
+    exclude '**/R.java'
+    exclude '**/authorization/**'
+    exclude '**/exception/**'
+    exclude '**/helper/**'
+    exclude '**/multipart/**'
+    exclude '**/request/**'
+    exclude '**/response/**'
+    exclude '**/callback/**'
+    exclude '**/sample/**'
+    exclude '**/auth/network/**'
+    exclude '**/internal/**'
+    exclude '**/tasks/**'
+    exclude '**/common/**'
+    exclude '**/api/**'
+    exclude '**/ageauth/**'
+    exclude '**/friends/**'
+    exclude '**/storage/**'
+    exclude '**/SingleNetworkTask.java'
+}
+
+// for publishing
+task cleanTask << {
+    println 'clean out dir'
+    delete DIST_DIR
+}
+
+import org.apache.tools.ant.filters.ConcatFilter
+
+task copyFullSource << {
+    copy {
+        from  '.'
+        into project.DIST_FULL_SOURCE_DIR
+        exclude project.DIST_DIR
+        exclude relativePath(project.buildDir)
+        exclude '.gradle'
+        exclude '.idea'
+        exclude '**/*.iml'
+        exclude '**/*.sh'
+        exclude '**/README.md'
+        exclude '**/.build'
+        exclude '**/build'
+        exclude '**/.DS_Store'
+        exclude '**/doctemplate'
+        exclude 'eclipse_properties'
+        exclude '_gradle.properties'
+        exclude 'kakao-open-android-sdk-sample/build.gradle'
+        exclude 'kakao-open-android-ageauth-sample'
+        exclude 'auth/src/test'
+        exclude 'friends/src/test'
+        exclude 'kakaolink/src/test'
+        exclude 'kakaostory/src/test'
+        exclude 'kakaotalk/src/test'
+        exclude 'network/src/test'
+        exclude 'push/src/test'
+        exclude 'storage/src/test'
+        exclude 'usermgmt/src/test'
+        exclude 'util/src/test'
+        exclude 's2/src/test'
+        exclude 'kakao-open-android-link-sample/src/test'
+        exclude 'kakao-open-android-link-sample/src/androidTest'
+        exclude 'kakao-open-android-sdk-sample/src/test'
+        exclude 'kakao-open-android-sdk-sample/src/androidTest'
+
+
+        rename { String fileName ->
+            fileName.replace('release_build.gradle', 'build.gradle')
+        }
+    }
+
+    copy {
+        from 'gradle.properties'
+        into project.DIST_FULL_SOURCE_DIR
+
+        filter(ConcatFilter, append: file('_gradle.properties'))
+    }
+
+    String content = ""
+    File proFile = new File( "${project.DIST_FULL_SOURCE_DIR}/settings.gradle" )
+    proFile.readLines().each { String line ->
+        if (!line.contains(':kakao-open-android-ageauth-sample')) {
+            content = content.concat(line + '\n')
+        }
+    }
+    proFile.write(content)
+}
+
+task copySourceForEclipse << {
+    copy {
+        from  'kakaolink/src/main/java'
+        from  'util/src/main/java'
+        from  'kakaotalk/src/main/java'
+        from  'kakaostory/src/main/java'
+        from  'push/src/main/java'
+        from  'usermgmt/src/main/java'
+        from  'auth/src/main/java'
+        from  'network/src/main/java'
+        from  'friends/src/main/java'
+        from  'storage/src/main/java'
+        from  's2/src/main/java'
+        from  'kakaonavi/src/main/java'
+        into "$project.DIST_ECLIPSE_SOURCE_DIR/src"
+
+        filter { String line ->
+            line.replaceAll("import com.kakao.\\D+\\.R;", "import com.kakao.android.sdk.R;")
+        }
+        filter { String line ->
+            line.replaceAll("return convert\\(BuildConfig.DEPLOY_PHASE\\);", "return Release;")
+        }
+        filter { String line ->
+            line.replaceAll("boolean showLogs = BuildConfig.SHOW_LOGS;", "boolean showLogs = false;")
+        }
+        filter { String line ->
+            line.replaceAll("import com.kakao.util.BuildConfig;", "//import com.kakao.util.BuildConfig;")
+        }
+        filter { String line ->
+            line.replaceAll("BuildConfig.SDK_VERSION", "\"$project.version\"")
+        }
+    }
+
+    copy {
+        from  'util/src/main/res'
+        from  'auth/src/main/res'
+        from  'kakaolink/src/main/res'
+        from  'kakaonavi/src/main/res'
+        into "$project.DIST_ECLIPSE_SOURCE_DIR/res"
+    }
+
+    copy {
+        from  'eclipse_properties'
+        into project.DIST_ECLIPSE_SOURCE_DIR
+    }
+
+    copy {
+        from 'NOTICE.md'
+        into "$project.DIST_ECLIPSE_SOURCE_DIR"
+    }
+}
+
+task zipFullSource(type: Zip, dependsOn : copyFullSource) {
+    from project.DIST_FULL_SOURCE_DIR
+    destinationDir=file(project.DIST_DIR)
+    baseName=project.DIST_ZIP_NAME
+    version=project.version
+    classifier='full'
+    delete project.DIST_FULL_SOURCE_DIR
+}
+
+task zipSourceForEclipse(type: Zip, dependsOn : copySourceForEclipse) {
+    from project.DIST_ECLIPSE_SOURCE_DIR
+    destinationDir=file(project.DIST_DIR)
+    baseName=project.DIST_ZIP_NAME
+    version=project.version
+    classifier='eclipse'
+    delete project.DIST_ECLIPSE_SOURCE_DIR
+}
+
+task changePhase << {
+    println '>>> changing DEFAULT_PHASE to ' + "${project.hasProperty('deploy_phase') ? deploy_phase.toString() : "$DEFAULT_PHASE"}"
+    String content = ""
+    File proFile = new File('gradle.properties')
+    proFile.readLines().each { String line ->
+        if (line.contains('DEFAULT_PHASE') && project.hasProperty('deploy_phase')) {
+            line = line.replaceAll('release', deploy_phase.toString())
+        }
+    content = content.concat(line + '\n')
+}
+proFile.write(content)
+}
+
+task revertPhase << {
+    println '>>> changing DEFAULT_PHASE to release'
+    String content = ""
+    File proFile = new File('gradle.properties')
+    proFile.readLines().each { String line ->
+        if (line.contains('DEFAULT_PHASE')) {
+            line = 'DEFAULT_PHASE=release'
+        }
+        content = content.concat(line + '\n')
+    }
+    proFile.write(content)
+}
+
+task beforeRelease << {
+    println '>>> execute prepare release'
+    String content = ""
+    File proFile = new File( 'gradle.properties' )
+    proFile.readLines().each { String line ->
+        if (line.contains('KAKAO_SDK_VERSION') && line.endsWith('-SNAPSHOT')) {
+            line = line.substring(0, line.indexOf('-SNAPSHOT'))
+        }
+        content = content.concat(line + '\n')
+    }
+    proFile.write(content)
+}
+
+
+task afterRelease << {
+    println '>>> execute after release'
+
+    String content = ""
+    File proFile = new File( 'gradle.properties' )
+    proFile.readLines().each { String line ->
+        if (line.contains('KAKAO_SDK_VERSION') && !line.endsWith('-SNAPSHOT')) {
+            String[] version = project.KAKAO_SDK_VERSION.split("\\.");
+            int newVersion = Integer.valueOf(version[2]) + 1;
+            println version.toString()
+            line = "KAKAO_SDK_VERSION=" + version[0] + "." + version[1]+ "." + String.valueOf(newVersion);
+            line = line.concat('-SNAPSHOT')
+        }
+        content = content.concat(line + '\n')
+    }
+    proFile.write(content)
+}
+

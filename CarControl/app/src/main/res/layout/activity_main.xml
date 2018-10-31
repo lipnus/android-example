@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="40dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/receiveString"
+        android:textSize="19dp"
+        android:text = "부릉부릉"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="140dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text = "▲"
+            android:background="#ffffff"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:onClick="onClick_Option1"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text = "◀"
+                android:background="#ffffff"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:onClick="onClick_Option3"/>
+
+            <Button
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "STOP"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="#ffffff"
+                android:onClick="onClick_Option0"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text = "▶"
+                android:background="#ffffff"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:onClick="onClick_Option4"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text = "▼"
+            android:layout_marginRight="3dp"
+            android:background="#ffffff"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:onClick="onClick_Option2"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_SKILL1"
+        android:background="#b40404"
+        android:textColor="#ffffff"
+        android:text="DASH"/>
+
+    </LinearLayout>

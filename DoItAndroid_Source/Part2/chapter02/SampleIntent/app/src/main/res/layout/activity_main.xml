@@ -1,0 +1,26 @@
+﻿<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="액티비티 띄우기"
+        android:textSize="24dp"
+        android:onClick="onButton1Clicked"/>
+    
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/button1"
+		android:layout_marginTop="40dp"
+		android:gravity="center_horizontal"
+		android:text="위의 버튼을 누르면 새로운 액티비티가 띄워집니다."
+		android:textSize="14dp"
+		android:textColor="#ffad6535" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">동기화된 스크롤뷰</string>
+    <string name="sync">synchronize</string>
+    <string name="enable">enable</string>
+    <string name="disable">disable</string>
+</resources>

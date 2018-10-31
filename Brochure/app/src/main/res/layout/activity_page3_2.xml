@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aeaba3"
+        android:weightSum="1">
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/intro3"/>
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="100dp"
+            android:text="▲\n▲\n▲\n"/>
+
+
+
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/music"/>
+
+            <TextView
+                android:layout_marginTop="22dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="7pt"
+                android:text="  - 연주가능한 악기들"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:background="@drawable/flute"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="          FLUTE : ★★★★☆"
+                />
+
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:background="@drawable/piano"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="          PIANO : ★★★☆☆"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:background="@drawable/harmonica"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="      HAMONICA : ★★☆☆☆"
+                />
+
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@drawable/caster"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="      CASTANET : ★★★★★"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@drawable/tem"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="              TAMBOURINE \n       ★★★★★★★★★★★"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/play"/>
+
+            <TextView
+                android:layout_marginTop="22dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="7pt"
+                android:text="  - 좋아하는 운동"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@drawable/swim"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="                  SWIMMING"
+                />
+
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:background="@drawable/karate"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="                    KARATE"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@drawable/boxing"/>
+
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="9pt"
+                android:text="                      BOXING"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/languate"/>
+
+
+            <TextView
+                android:layout_marginTop="42dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textColor="#717070"
+                android:textSize="11pt"
+                android:layout_marginBottom="20dp"
+                android:text="-부산어 : ★★★★★ \n\n-서울어 : ★★★★☆ \n\n-영어 : ★★★☆☆ \n\n-중국어 : ★☆☆☆☆ \n\n-JAVA : ★★★★☆ \n\n-C++ : ★★☆☆☆ \n\n-HTML/CSS : ★★☆☆☆ \n\n-ANDROID : ★★★★☆"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/tool"/>
+
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_width="290dp"
+                android:layout_height="330dp"
+                android:background="@drawable/toolicon"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#3d4dcc"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:text="다음 페이지로 넘어가기 \n\n [ 이곳을 터치해주세요 ]"
+            android:onClick="onClick_next"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

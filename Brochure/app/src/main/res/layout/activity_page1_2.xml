@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aeaba3"
+        android:weightSum="1">
+
+
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/intro" />
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="200dp"
+            android:text="▲\n▲\n▲\n"/>
+
+
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_gravity="left"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/wait"
+                    android:onClick="onClick"/>
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="18pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="33"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="220dp"
+                android:background="@drawable/face"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:text=
+                    "기말고사의 폭풍 한가운데서 만들어진 이 Brochure!!!
+                \n\n만들다보니 5000줄에 육박하는 코드...
+                \n기말고사는 망하겠지만 이 Brochure는 당신의 기억속에 오랫동안 남았으면 하는 바람입니다
+
+                \n\n희생된 계산이론, 논리설계, 이산수학, 자료구조 성적에게 애도를 표합니다"
+                />
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="250dp"
+        android:padding="30dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#eedb07">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:background="@drawable/name1" />
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:text=
+                "저는 황선필이라고 합니다
+                \n\nComputerScience를 전공하는 대학생이죠
+                \n\n자세한 건 뒤쪽에 나오니까 여기서 미리 공개하지 않겠습니다
+                \n\n\n\n궁금??\n"
+            />
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:padding="30dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eedb07">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/name2" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:text=
+                    "INTRO, FAVORATE, TIMELINE, DREAM 4개의 Stage로 구성되어 있습니다.
+
+                \n\n가벼운 주제부터 시작해서 하나하나 알아 가 봅시다.
+                \n단, 각 단계마다 간단한 미션을 수행하셔야 합니다
+                \n\n각각의 미션은 다 다른 유형입니다.
+
+                \n \n \n 재미있을거예요^^ "
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="50dp"
+            android:text="카운트가 종료될때까지 잠시 기다려주세요"/>
+
+        <TextView
+            android:id="@+id/count2"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="50dp"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

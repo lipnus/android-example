@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/mainLinear">
+
+    <FrameLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="270dp">
+
+        <TextView
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="거울아 거울아..."
+            android:id="@+id/MainTextView"/>
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="260dp"
+            android:background="@drawable/redbox"
+            android:id="@+id/redbox"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="260dp"
+            android:background="@drawable/grayframe"
+            android:id="@+id/grayframe"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="260dp"
+            android:background="@drawable/logopic"
+            android:id="@+id/logopic"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="260dp"
+            android:background="@drawable/blacktriangle"
+            android:id="@+id/balcktriangle"/>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="220dp"
+            android:layout_height="260dp"
+            android:background="@drawable/miger"
+            android:id="@+id/miger"/>
+
+
+    </FrameLayout>
+
+
+
+    <Button
+        android:layout_marginTop="60dp"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:textColor="#ffffff"
+        android:text="실행하기"
+        android:background="#4f576e"
+        android:onClick="onClick"
+          />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:textColor="#ffffff"
+        android:text="도움말"
+        android:background="#357c7a"
+        android:onClick="onClick_howtouse"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:textColor="#ffffff"
+        android:text="App 정보"
+        android:background="#3d3636"
+        android:onClick="onClick_information"/>
+
+
+
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:id="@+id/testImageView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Copyright ⓒ LIPNUS All Rights Reserved."/>
+
+
+</LinearLayout>
+</ScrollView>

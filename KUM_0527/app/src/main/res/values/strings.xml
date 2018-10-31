@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kumchurk</string>
+    <string name="hello">Hello World, NMapViewer!</string>
+    <string name="str_done">완료</string>
+</resources>

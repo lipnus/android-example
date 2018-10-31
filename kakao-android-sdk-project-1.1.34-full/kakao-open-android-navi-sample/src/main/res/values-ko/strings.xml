@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">내비 샘플</string>
+    <string name="title_activity_main">카카오내비 SDK 샘플</string>
+    <string name="title_activity_kakaonavi_map">장소 검색</string>
+
+    <string name="text_enter_location">목적지 검색</string>
+
+    <string name="text_share_dest">목적지 공유</string>
+    <string name="text_navi_guide">길 안내</string>
+
+    <string name="text_navi_method">카카오내비</string>
+    <string name="text_cancel">취소</string>
+
+    <string name="text_destination">목적지</string>
+    <string name="text_navi_option">옵션</string>
+    <string name="text_via_list">경유지</string>
+
+    <string name="text_vehicle_type">차종</string>
+    <string name="text_rp_option">경로옵션</string>
+    <string name="text_start">시작위치 검색</string>
+    <string name="text_start_angle">시작 앵글</string>
+    <string name="text_route_info">전체 경로 보기 여부</string>
+    <string name="text_return_to_app">앱으로 다시 돌아오기</string>
+
+    <string name="text_stop1">경유지 1 검색</string>
+    <string name="text_stop2">경유지 2 검색</string>
+    <string name="text_stop3">경유지 3 검색</string>
+
+    <string name="text_choose_location">이 장소를 선택하시겠습니까?</string>
+    <string name="go_kakao_navi">실행</string>
+    <string name="location_query_hint">장소 이름을 입력하세요.</string>
+
+    <string name="cancel">취소</string>
+    <string name="ok">확인</string>
+</resources>

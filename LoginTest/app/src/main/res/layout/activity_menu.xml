@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:id="@+id/tv2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="고객 관리"
+        android:id="@+id/btn1"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick_Select"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="매출 관리"
+        android:id="@+id/btn2"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick_Select"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="상품 관리"
+        android:id="@+id/btn3"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick_Select"/>
+
+</LinearLayout>

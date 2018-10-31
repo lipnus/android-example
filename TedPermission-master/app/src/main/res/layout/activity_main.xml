@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_rationale_deny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rationale and Deny Dialog(Reccomand)"
+        />
+
+
+    <Button
+        android:id="@+id/btn_only_deny_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only Deny Dialog"
+        />
+
+
+    <Button
+        android:id="@+id/btn_only_rationale_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only Rationale Dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_nomessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Dialog(Permission check Only)"
+        />
+
+    <Button
+        android:id="@+id/btn_windowPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Window Permission"
+        />
+
+
+</LinearLayout>

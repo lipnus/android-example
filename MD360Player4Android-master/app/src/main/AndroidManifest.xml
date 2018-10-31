@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.asha.md360player4android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Other.DemoActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Other.IjkPlayerDemoActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="IjkPlayerDemoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Other.VideoPlayerActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="VideoPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Other.BitmapPlayerActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="BitmapPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Other.CubemapPlayerActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="CubemapPlayerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Other.RecyclerViewActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Scene.MainList" />
+        <activity android:name=".Scene.MovieInfoActivity"></activity>
+    </application>
+
+</manifest>

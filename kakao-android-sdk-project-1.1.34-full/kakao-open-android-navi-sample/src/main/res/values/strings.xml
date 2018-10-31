@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Navi Sample</string>
+    <string name="title_activity_main">KakaoNavi SDK Sample</string>
+    <string name="title_activity_kakaonavi_map">Pick Location</string>
+
+    <string name="alpha_kakao_app_key">12ff2b5742bf882a429125bb5d63caa8</string>
+    <string name="beta_kakao_app_key">dd4e9cb75815cbdf7d87ed721a659baf</string>
+    <string name="sandbox_kakao_app_key">12ff2b5742bf882a429125bb5d63caa8</string>
+    <string name="kakao_app_key">c545d04ca2707e51d8c7eec7f507b340</string>
+
+    <string name="daum_api_key">b40d78a38232d448e68b643aeb563a19</string>
+    <string name="text_enter_location">Search your destination.</string>
+
+    <string name="text_share_dest">Share Destination</string>
+    <string name="text_navi_guide">Navigation</string>
+
+    <string name="text_navi_method">KakaoNavi</string>
+    <string name="text_cancel">Cancel</string>
+
+    <string name="text_destination">Destination</string>
+    <string name="text_navi_option">Option</string>
+    <string name="text_via_list">Via List</string>
+
+    <string name="text_vehicle_type">Vehicle Type</string>
+    <string name="text_rp_option">Rp Option</string>
+    <string name="text_start">Search Start Location</string>
+    <string name="text_start_angle">Start Angle</string>
+    <string name="text_route_info">See whole route?</string>
+    <string name="text_return_to_app">Return to app after navi finishes?</string>
+
+    <string name="text_stop1">Search Stop 1</string>
+    <string name="text_stop2">Search Stop 2</string>
+    <string name="text_stop3">Search Stop 3</string>
+
+    <string name="text_choose_location">Choose this location?</string>
+    <string name="go_kakao_navi">Go</string>
+    <string name="location_query_hint">Enter location name.</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="ok">Okay</string>
+    <string name="title_activity_kakao_navi">KakaoNaviActivity</string>
+</resources>
